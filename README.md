@@ -1,18 +1,22 @@
-# crud-tailwindcss
-Ejercicio:
-> Transcribir la aplicación de tareas hecha con VIte migrando los estilos a TailwindCSS
+primeramente crear o clonar el repositorio:
 
-sesiones, objeto del lado del servidor, 
-ventajas:persiste del estado de usuario
-desventajas:
+git clone https://github.com/ArianneAlonso/crud-tasks-backend.git
 
-se puede acceder al objeto cookie en js
-document.cookie
-y http
+al abrir el archivo en visual, posicionarse en dicha carpeta con ctrl + ñ donde dentro de la terminal escribimos los siguientes comandos:
 
-en el token solo esta el id del usuario
+cd crud-tasks-backend
 
-jwt, no interesa si el servidor tiene info
+cd src
 
-jwt, autentica a las demas pages
+npm init -y
 
+instalar las dependecias con los siguientes comandos:
+
+npm i cors mysql2 express morgan express-validator
+
+en package.json agregar 
+
+  "type": "module",
+
+  y dentro de "scripts" agregar:
+   "dev": "node --watch app.js"
