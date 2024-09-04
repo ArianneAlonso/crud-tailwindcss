@@ -1,13 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>crud task</title>
+    <link rel="stylesheet" href="src/styles/style.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <form id="create-task-form">
+      <h2>Crear tarea</h2>
+
+      <div class="form-control">
+        <label for="input-title">insertar título</label>
+        <input
+          type="text"
+          name="title"
+          id="input-title"
+          placeholder="Study JavaScript"
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="input-description">insertar descripción</label>
+        <textarea
+          name="description"
+          id="input-description"
+          placeholder="Study JavaScript basics"
+        ></textarea>
+      </div>
+
+      <div>
+        <input type="checkbox" name="isComplete" id="input-is-complete" />
+        <label for="input-is-complete">¿está completado?</label>
+      </div>
+      <button type="submit">crear</button>
+    </form>
+    <div id="app" class="task-list">
+      <h2>Lista</h2>
+    </div>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
